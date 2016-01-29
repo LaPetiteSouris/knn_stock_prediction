@@ -1,0 +1,5 @@
+pytest==2.7.2
+sure==1.2.12
+pep8==1.6.2
+scikit-learn==0.17
+pandas==0.17.1
