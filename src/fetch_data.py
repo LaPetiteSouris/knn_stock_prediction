@@ -33,7 +33,7 @@ def load_yahoo_finance_data():
         cls_point_arr.append(cls_point.iloc[i].values[0])
     close_point_shifted_right = [cls_point_arr[i]
                                  for i in range(1, len(cls_point_arr))]
-    j = len(cls_point.index)-1
+    j = len(cls_point.index) - 1
     target_label.append([open_point.iloc[j].values[0],
                          high_point.iloc[j].values[0],
                          low_point.iloc[j].values[0],
@@ -42,16 +42,14 @@ def load_yahoo_finance_data():
     return feature, close_point_shifted_right, target_label
 
 
-def load_raw_yahoo_finance_data():
-    feature = []
-    #current_date = date.datetime.now().date()
-    start = date.datetime(2016, 1, 25)
-    current_date = date.datetime(2016, 1, 28)
-    result = web.DataReader('ABBN.VX', 'yahoo', start, current_date)
+def get_today_data():
+    current_date = date.date.today()
+    result = web.DataReader('ABBN.VX', 'yahoo', current_date, current_date)
     # Adj closing point of the index
+    cls_point_val = 0
+    if result.empty:
+        return cls_point_val
     cls_point = result.loc[:, ['Close']]
-    open_point = result.loc[:, ['Open']]
-    high_point = result.loc[:, ['High']]
-    low_point = result.loc[:, ['Low']]
-    vol = result.loc[:, ['Volume']]
-    return cls_point, open_point, high_point, low_point, vol
+    cls_point_val = cls_point.iloc[0].values[0]
+
+    return cls_point_val
