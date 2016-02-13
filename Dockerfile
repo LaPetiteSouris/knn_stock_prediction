@@ -4,3 +4,4 @@ COPY . /src
 WORKDIR /src
 
 RUN pip install -r /src/dev-requirements.txt 
+CMD ["getresult", "/src/starter.py"]
