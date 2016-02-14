@@ -13,10 +13,10 @@ Recommended running method is with Jupyter, as the project require complicate Nu
 3. Copy src folder in your Jupyter notebook root <br/>
 4. docker run -d -p 8888:8888 -v /home/foo/foo:/home/ds/notebooks dataquestio/python3-starter <br/>
 /home/foo/foo is your Jupyter notebook root directory. <br/>
-5. Open your Jupyter notebook in webrowser, execute file starter.py from python to get prediction result for the next day.
+5. Open your Jupyter notebook in web browser at localhost:8888, execute file starter.py from python to get prediction result for the next day.
 
 
 
 # Requirement 
 
--Docker installed
+Docker installed
