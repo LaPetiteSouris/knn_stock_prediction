@@ -6,7 +6,7 @@ Predict ABB stock closing price based on sell volume, open price, low price and 
 
 # How to run
 
-Recommended running method is with Jupyter, as the project require complicate NumPy, SciPy and Scikit-learn configuration which are all available in a typical scientific data processing projects. <br/>
+Recommended running method is with Jupyter, as the project requires complicated NumPy, SciPy and Scikit-learn configuration which are all available in a typical scientific data processing project. <br/>
 
 1. Install Docker <br/>
 2. Pull pre-configured Docker images *dataquestio/python2-starter* <br/>
