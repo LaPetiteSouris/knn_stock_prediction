@@ -13,8 +13,8 @@ class predictor:
         self.feature = feature
         self.target_label = target_label
         self.result = result
-        knnregressor = KNeighborsRegressor(n_neighbors=5, weights='uniform',
-                                           algorithm='brute')
+        knnregressor = KNeighborsRegressor(n_neighbors=10, weights='uniform',
+                                           algorithm='kd_tree')
         val = 0
         if feature and result is not None:
 

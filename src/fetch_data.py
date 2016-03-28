@@ -12,7 +12,8 @@ def load_yahoo_finance_data():
     cls_point_arr = []
     target_label = []
     start = date.datetime(2000, 1, 1)
-    last_date = date.datetime.today()
+    # last_date = date.datetime.today()
+    last_date = date.datetime(2016, 2, 11)
     result = web.DataReader('ABBN.VX', 'yahoo', start, last_date)
     # Adj closing point of the index
     cls_point = result.loc[:, ['Close']]
